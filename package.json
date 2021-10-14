@@ -1,5 +1,5 @@
 {
-  "name": "pro-collect-scratch",
+  "name": "pcl-nftnt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -61,5 +61,7 @@
   },
   "devDependencies": {
     "@types/regenerator-runtime": "^0.13.1"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
