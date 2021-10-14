@@ -7,7 +7,7 @@ import {
     formatNumber
 } from '../helpers/Helpers';
 
-import loadingindicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/loadingindicator";
 import {getDelphiMedian} from "../api/Api";
 import {claimDropAction, purchaseDropAction} from "../wax/Wax";
 
