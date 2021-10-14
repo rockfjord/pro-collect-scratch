@@ -6,7 +6,7 @@ const HeroContainer = () => {
 	    <section className="hero-section moving section-padding" id="home">
 	        <div className="moving-bg"></div>
 	        <div className="hero-section-content">
-	            <div className="container ">
+	            <div className="container-fluid">
 	                <div className="row align-items-center">
 	                    <div className="col-12 col-lg-6 col-md-12">
 	                        <div className="welcome-content">

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './assets/css/bootstrap.min.css'
 import './assets/css/global.css'
 import './App.css';
@@ -15,6 +16,7 @@ import {
   getPacks
 } from "./components/api/Api";
 import Home from "./components/Home"
+import Collection from './components/Collection';
 import WindowWrapper from "./components/windows/WindowWrapper";
 import { Anchor } from "ual-anchor";
 import { Wax } from "@eosdacio/ual-wax";
@@ -23,6 +25,7 @@ import { useContext, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import MarketWrapper, { Context } from "./components/marketwrapper";
 import cn from "classnames";
+import 'regenerator-runtime/runtime'
 import config from "./config.json";
 
 const queryClient = new QueryClient();
@@ -136,10 +139,13 @@ function App({ Component, pageProps }) {
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         </Helmet>
-
+          <Navigation {...props} />
   			<Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/Collection" exact component={Collection} />
         </Switch>
+  
+        <Footer {...props} />
 	    </div>
     	</div>
     

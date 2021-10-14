@@ -1,5 +1,5 @@
 import cn from "classnames";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import ResultList from "../packs/ResultList";
 import React from "react";
 
@@ -27,7 +27,7 @@ function ResultWindow(props) {
                     <source src={animation.video} />
                     Your browser does not support the video tag.
                 </video> : <div id={'Results'}>
-                    {isLoading ? <LoadingIndicator /> : <div>
+                    {isLoading ? <loadingindicator /> : <div>
                         <ResultList
                             results={results}
                         />

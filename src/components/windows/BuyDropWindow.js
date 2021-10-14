@@ -7,7 +7,7 @@ import {
     formatNumber
 } from '../helpers/Helpers';
 
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import {getDelphiMedian} from "../api/Api";
 import {claimDropAction, purchaseDropAction} from "../wax/Wax";
 
@@ -100,7 +100,7 @@ function BuyDropWindow(props) {
                 <WindowButton text={free ? "Claim" : "Purchase"} onClick={free ? claim : purchase} />
             </div>
             {isLoading ? <div className="absolute t-0 w-full h-full backdrop-filter backdrop-blur-md">
-                <LoadingIndicator text="Loading Transaction" />
+                <loadingindicator text="Loading Transaction" />
             </div> : '' }
         </div>
     );

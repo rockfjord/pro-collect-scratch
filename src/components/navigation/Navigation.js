@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable array-callback-return */
 import React, {Fragment, useEffect, useState} from 'react';
 import { Menu, Transition } from '@headlessui/react'
-import Logo from "../common/util/Logo"
+import Logo from "../../assets/img/nftnthex.png"
 import {
   BrowserRouter as useRouter,
   Switch,
@@ -11,13 +13,15 @@ import {getRefundBalance, getWaxBalance} from "../api/Api";
 import {formatNumber} from "../helpers/Helpers";
 import cn from "classnames";
 
-import LoadingIndicator from "../loadingindicator/loadingindicator";
+import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+    
 
 const Navigation = React.memo(props => {
-    const router = useRouter()
 
-    const ual = props['ual'] ? props['ual'] : {'activeUser': null};
+    const router = useRouter(props)
+    
 
+    const ual = props['ual'] ? props['ual'] : {'activeUser': null}
     const [isLoading, setIsLoading] = useState(null);
     const [balance, setBalance] = useState(null);
     const [refundBalance, setRefundBalance] = useState(null);
@@ -266,6 +270,7 @@ const Navigation = React.memo(props => {
             </div>
         </div>
     );
+
 });
 
 export default Navigation;

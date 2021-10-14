@@ -6,7 +6,7 @@ import config from "../../config.json";
 
 import AssetCard from "../assetcard/AssetCard";
 import {getAuctions} from "../api/Api";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/loadingindicator";
 import Pagination from "../pagination/Pagination";
 import Filters from "../filters/Filters";
 import MarketContent from "../common/layout/Content"
@@ -97,7 +97,7 @@ const Market = (props) => {
                         page={page}
                         setPage={setPage}
                     />
-                    { isLoading ? <LoadingIndicator /> : 
+                    { isLoading ? <loadingindicator /> : 
                         <div className={cn(
                             "relative w-full mb-24",
                             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"

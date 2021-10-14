@@ -4,7 +4,7 @@ import {Context} from "../marketwrapper";
 import {getFilters, getValues} from "../helpers/Helpers";
 import {getAssets} from "../api/Api";
 import Pagination from "../pagination/Pagination";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/loadingindicator";
 import AssetCard from "../assetcard/AssetCard";
 
 function MyPacksList(props) {
@@ -55,7 +55,7 @@ function MyPacksList(props) {
                     page={page}
                     setPage={setPage}
                 />
-                { isLoading ? <LoadingIndicator /> :
+                { isLoading ? <loadingindicator /> :
                     <div className={cn(
                         "relative w-full mb-24",
                         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"

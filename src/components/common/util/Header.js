@@ -2,8 +2,7 @@
 import React , {useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import {Addshrink} from './Addshrink'
-import LoadingIndicator from '../../loadingindicator/LoadingIndicator'
-import Logo from './Logo'
+import Logo from '../../../assets/img/nftnthex.png'
 
 
 function Head({Title}){
@@ -17,10 +16,10 @@ function Head({Title}){
 
 return(
     <>
-        <LoadingIndicator Title={Title} />
+        <loadingindicator Title={Title} />
         <nav className="navbar navbar-expand-lg navbar-white fixed-top" id="banner">
             <div className="container">
-                <NavLink className="navbar-brand" to="/"><span><img src={Logo} alt="logo" /></span></NavLink>
+                <NavLink className="navbar-brand" to="/"><span><img src={Logo} alt="NFTNT" /></span></NavLink>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span className="navbar-toggler-icon"></span>

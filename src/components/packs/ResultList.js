@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import Filters from "../filters/Filters";
 import ResultCard from "./ResultCard";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 
 function ResultList(props) {
 

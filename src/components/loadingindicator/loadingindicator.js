@@ -1,35 +1,23 @@
-import {useEffect} from "react"
-import {loader} from '../common/util/loader'
-import { Helmet } from "react-helmet";
 
-function LoadingIndicator(props) {
+function loader() {
+    var fadeTarget = document.getElementById("preloader");
 
-	useEffect(() => {
-		loader()
-	},[])
+    function fadeOutEffect() {
+        
+        var fadeEffect = setInterval(function () {
+            if (fadeTarget.style.opacity > 0) {
+                fadeTarget.style.opacity -= 0.1;
+            } else {
+                clearInterval(fadeEffect);
+                fadeTarget.style.display = 'none'
+            }
+        }, 100);
+    }
 
-	return(
-		<>
-	        <Helmet>
-	            <meta charSet="utf-8" />
-	            <title>(props)</title>
-	            <meta name="robots" content="noindex, follow" />
-	            <meta
-	                name="description"
-	                content="Hope – Health &amp; Medical React JS Template"
-	            />
-	            <meta
-	                name="viewport"
-	                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-	            />
-	        </Helmet>
-		    <div id="preloader">
-		        <div className="preload-content">
-		            <div id="dream-load"></div>
-		        </div>
-		    </div>
-	    </>
-	)
+    window.onload = setTimeout(fadeOutEffect , 1000)
 }
 
-export default LoadingIndicator;
+
+
+
+export default loader;

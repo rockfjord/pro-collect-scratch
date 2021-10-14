@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import ErrorMessage from "../common/util/ErrorMessage";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import {formatNumber} from "../helpers/Helpers";
 import cn from "classnames";
 import WindowButton from './WindowButton';
@@ -122,7 +122,7 @@ function BidWindow(props) {
                 { userName !== seller ? <WindowButton text="Bid" onClick={bid} /> : '' }
             </div>            
             {isLoading ? <div className="absolute t-0 w-full h-full backdrop-filter backdrop-blur-md">
-                <LoadingIndicator text="Loading Transaction"/>
+                <loadingindicator text="Loading Transaction"/>
             </div> : '' }
         </div>
     );

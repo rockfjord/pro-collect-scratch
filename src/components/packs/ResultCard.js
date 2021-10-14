@@ -4,7 +4,7 @@ import config from "../../config.json";
 
 import cn from "classnames";
 import CardImage from "../assetcard/CardImage";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 
 function ResultCard(props) {
     const index = props['index'];
@@ -25,7 +25,7 @@ function ResultCard(props) {
         collection_name
     } = collection;
 
-    return (loading ? <LoadingIndicator/> :
+    return (loading ? <loadingindicator/> :
         <div
             className={cn(
                 'relative w-full mx-auto rounded-md overflow-hidden',

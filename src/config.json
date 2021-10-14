@@ -4,7 +4,7 @@
   "market_name": "waxprotrader",
   "market_url": "https://www.nftnt.io",
   "default_collection": "gdz.topps",
-  "api_endpoint": "https://api.hivebp.io, http://wax.eosusa.news, http://publicapi-mainnet.eosauthority.com",
+  "api_endpoint": "https://api.hivebp.io",
   "limit": 12,
   "drops_contract": "neftyblocksd",
   "packs_contracts": ["atomicpacksx", "neftyblocksp"],
@@ -14,5 +14,5 @@
   "instagram_link": "https://www.instagram.com/OfficialNFTNT/",
   "market_title": "WAX Pro Collectors Leauge",
   "market_description": "By NFTNT, Troll and Toads entrance into the world of NFTs.",
-  "market_image": "/wax.png"
+  "market_image": "/nftnthex.png"
 }

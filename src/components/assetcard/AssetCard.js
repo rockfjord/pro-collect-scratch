@@ -2,15 +2,18 @@ import React, {useEffect, useState} from 'react';
 
 import config from "../../config.json";
 
-import MarketButtons from '../marketbuttons';
-
 import moment from 'moment';
-
+import MarketButtons from "../marketbuttons"
 import {
     formatMintInfo
 } from "../helpers/Helpers";
 import CardDetails from "./CardDetails";
-import Link from '../common/util/input/Link';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 import SvgIcon from '../common/util/SvgIcon'
 import MoreOptions from "./MoreOptions";
 import CardImage from "./CardImage";

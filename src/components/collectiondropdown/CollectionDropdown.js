@@ -10,7 +10,7 @@ import {
     createCollectionOption,
     getValues,
 } from "../helpers/Helpers";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import config from "../../config.json";
 import cn from "classnames";
 
@@ -138,7 +138,7 @@ const CollectionDropdown = React.memo(props => {
                     />
                 </div>
             </div>
-             : <LoadingIndicator/> }
+             : <loadingindicator/> }
         </div>
     ) : <div></div>;
 });

@@ -8,11 +8,7 @@ export default function WindowButton(
     return (
         <Button
             className={cn(
-                'w-36 h-8 ml-4 bg-primary',
-                'text-xxs text-secondary',
-                'border border-solid border-primary',
-                'rounded-bl-xl rounded-tr-xl outline-none',
-                'hover:font-bold',
+ 
                 className
             )}
             onClick={onClick}

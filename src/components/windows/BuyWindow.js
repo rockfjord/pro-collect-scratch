@@ -8,7 +8,7 @@ import {
     formatNumber
 } from '../helpers/Helpers';
 
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import {purchaseSaleAction} from "../wax/Wax";
 
 function BuyWindow(props) {
@@ -77,7 +77,7 @@ function BuyWindow(props) {
                 { userName !== seller ? <WindowButton text="Buy" onClick={buy} /> : '' }
             </div>
             {isLoading ? <div className="absolute t-0 w-full h-full backdrop-filter backdrop-blur-md">
-                <LoadingIndicator text="Loading Transaction" />
+                <loadingindicator text="Loading Transaction" />
             </div> : '' }
         </div>
     );

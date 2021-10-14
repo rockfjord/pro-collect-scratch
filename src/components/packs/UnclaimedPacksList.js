@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import cn from "classnames";
 import MarketContent from "../common/layout/Content";
 import Pagination from "../pagination/Pagination";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/loadingindicator";
 import AssetCard from "../assetcard/AssetCard";
 import {Context} from "../marketwrapper";
 import {getValues} from "../helpers/Helpers";
@@ -118,7 +118,7 @@ export default function UnclaimedPacksList(props) {
                         page={page}
                         setPage={setPage}
                     />
-                    { isLoading ? <LoadingIndicator /> :
+                    { isLoading ? <loadingindicator /> :
                         <div className={cn(
                             "relative w-full mb-24",
                             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"

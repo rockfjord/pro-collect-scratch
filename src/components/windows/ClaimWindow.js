@@ -4,7 +4,7 @@ import WindowButton from './WindowButton';
 import WindowContent from './WindowContent';
 
 import ErrorMessage from "../common/util/ErrorMessage";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import config from "../../config.json";
 import {Context} from "../marketwrapper";
 import {claimPack} from "../helpers/Helpers";
@@ -153,7 +153,7 @@ function UnboxPopup(props) {
             }
 
             {isLoading ? <div className="mb-2">
-                <LoadingIndicator />
+                <loadingindicator />
             </div> : <div className={cn(
                 'relative m-auto mt-5 h-20 lg:h-8',
                 'flex justify-evenly flex-wrap lg:justify-end'

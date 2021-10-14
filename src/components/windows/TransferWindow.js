@@ -126,7 +126,7 @@ function TransferWindow(props) {
 
 
             {isLoading ? <div className="absolute t-0 w-full h-full backdrop-filter backdrop-blur-md">
-                <LoadingIndicator text="Loading Transaction"/>
+                <loadingindicator text="Loading Transaction"/>
             </div> : '' }
         </div>
     );

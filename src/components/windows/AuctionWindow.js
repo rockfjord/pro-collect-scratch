@@ -7,7 +7,7 @@ import Input from '../common/util/input/Input';
 import {formatNumber} from '../helpers/Helpers'
 
 import ErrorMessage from "../common/util/ErrorMessage";
-import LoadingIndicator from "../loadingindicator/LoadingIndicator";
+import loadingindicator from "../loadingindicator/LoadingIndicator";
 import config from "../../config.json";
 import {announceAuctionAction} from "../wax/Wax";
 
@@ -213,7 +213,7 @@ function AuctionWindow(props) {
                             <div>{cut} WAX</div>
                             <div>Your Cut</div>
                         </div>
-                    </div> : <LoadingIndicator/>
+                    </div> : <loadingindicator/>
                 }
                 <div className={cn(
                     'relative m-auto mt-5 lg:mt-10 h-20 lg:h-8',
@@ -229,7 +229,7 @@ function AuctionWindow(props) {
             </div>
 
             {isLoading ? <div className="absolute t-0 w-full h-full backdrop-filter backdrop-blur-md">
-                <LoadingIndicator text="Loading Transaction" />
+                <loadingindicator text="Loading Transaction" />
             </div> : '' }
         </div>
     );
