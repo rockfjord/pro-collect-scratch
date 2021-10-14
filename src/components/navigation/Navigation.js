@@ -16,7 +16,7 @@ import cn from "classnames";
 import loadingindicator from "../loadingindicator/loadingindicator";
 
 const Navigation = React.memo((props) => {
-  const router = useRouter(props);
+  const router = useRouter;
 
   const ual = props["ual"] ? props["ual"] : { activeUser: null };
   const [isLoading, setIsLoading] = useState(null);
@@ -131,54 +131,6 @@ const Navigation = React.memo((props) => {
             "uppercase font-bold text-base"
           )}
         >
-          <Link href={"/explorer"}>
-            <span
-              className={cn(
-                "pb-px md:pb-2",
-                router.pathname.indexOf("/explorer") > -1
-                  ? "border-b-4 border-primary"
-                  : ""
-              )}
-            >
-              Explorer
-            </span>
-          </Link>
-          <Link href={"/market"}>
-            <span
-              className={cn(
-                "pb-px md:pb-2",
-                router.pathname.indexOf("/market") > -1
-                  ? "border-b-4 border-primary"
-                  : ""
-              )}
-            >
-              Market
-            </span>
-          </Link>
-          <Link href={"/auctions"}>
-            <span
-              className={cn(
-                "pb-px md:pb-2",
-                router.pathname.indexOf("/auctions") > -1
-                  ? "border-b-4 border-primary"
-                  : ""
-              )}
-            >
-              Auctions
-            </span>
-          </Link>
-          <Link href={"/drops"}>
-            <span
-              className={cn(
-                "pb-px md:pb-2",
-                router.pathname.indexOf("/drops") > -1
-                  ? "border-b-4 border-primary"
-                  : ""
-              )}
-            >
-              Drops
-            </span>
-          </Link>
           {isLoading ? (
             <loadingindicator />
           ) : userName ? (
